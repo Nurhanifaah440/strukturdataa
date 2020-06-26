@@ -1,0 +1,44 @@
+
+package contohlinkedlist;
+
+import java.util.LinkedList;
+
+public class ContohLinkedList {
+     public static void main(String[] args) {
+        // Membuat objek yang bernama daftar pada class linkedlist
+        LinkedList<String>daftar = new LinkedList<String>();
+        //menambhakan elemen pada linkedlist
+        daftar.add("A");
+        daftar.add("B");
+        daftar.addLast("C");
+        daftar.addFirst("D");
+        daftar.add("3,B");
+        daftar.add("F");
+        daftar.add("G");
+            System.out.println("linked list :"+ daftar);
+            //menghapus elemen linked list
+            daftar.remove("B");
+            daftar.remove(3);
+            daftar.removeFirst();
+            daftar.removeLast();
+            System.out.println("linked list setelah dihapus:"+daftar);
+            //menemukan elemen linkedlist
+            boolean status = daftar.contains("E");
+            if(status)
+                System.out.println("di linked list terdapat elemen 'E'");
+            else
+                System.out.println("di linked list tidak terdapat elemen 'E'");
+            
+            //ukuran dari elemen pada linkedlist
+            int size = daftar.size();
+            System.out.println("Ukuran dari linked list ="+size);
+            
+            //Menunjuk dan memberi nilai elemen dari linked list
+            Object element = daftar.get(2);
+            System.out.println("element yang ditunjuk oleh get():"+element);
+            daftar.set(2,"Y");
+            System.out.println("linked list pasca perubahan:"+daftar);
+    }
+}
+    
+
